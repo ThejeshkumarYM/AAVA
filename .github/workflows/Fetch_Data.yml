@@ -3,34 +3,5 @@ name: Fetch Data and Test
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  fetch-and-test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.x"
-
-      - name: Install dependencies
-        run: |
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          fi
-
-      - name: Fetch data from agent
-        run: |
-          echo "Fetching data from agent..."
-          # Replace with: python scripts/fetch_data.py
-
-      - name: Run test script
-        run: |
-          echo "Running test script..."
-          # Replace with: python tests/test_fetch.py
+      - main  # Runs on any push to main
+  workflow_dispatch: # Optional manual trigger
