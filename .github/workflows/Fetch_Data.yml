@@ -1,7 +1,31 @@
 name: Fetch Data and Test
 
+# Trigger on push to main or manual run
 on:
   push:
     branches:
-      - main  # Runs on any push to main
-  workflow_dispatch: # Optional manual trigger
+      - main
+  workflow_dispatch:
+
+jobs:
+  fetch-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Run your agent
+      - name: Run agent to fetch data
+        run: |
+          echo "Running the updated agent..."
+          # Replace this with your actual agent command
+          ./agent --fetch-data
+
+      # Step 3: Run your tests
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          # Replace this with your actual test command
+          ./agent --run-tests
