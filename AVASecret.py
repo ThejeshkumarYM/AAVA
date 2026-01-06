@@ -1,1 +1,1 @@
-print("hello world")
+copy this hello world
