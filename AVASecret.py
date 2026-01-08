@@ -18,7 +18,7 @@ Enhancement Suggestions:
 
 ----------
 
-Locator: ID=navbarSupportedContent
+Locator:XPATH, "(//li/a[@class='breakdance-link breakdance-menu-link'])[1]"
 
 ----------
 
@@ -32,7 +32,7 @@ def chrome_browser():
 
 def open_platform(driver):
     driver.get('https://www.testrail.com/')
-    element = driver.find_element(By.ID, 'navbarSupportedContent')
+    element = driver.find_element(By.XPATH, "(//li/a[@class='breakdance-link breakdance-menu-link'])[1]")
     # Example interaction: print the text content of the element
     print(element.text)
     # You can add additional interactions here if needed
