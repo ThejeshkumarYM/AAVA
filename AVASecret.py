@@ -7,11 +7,9 @@ def chrome_browser():
 
 def open_platform(driver):
     driver.get('https://www.testrail.com/')
-    # Wait for the page to load and locate the element by ID
     element = driver.find_element(By.ID, 'header-navbar')
-    # Example interaction: print the element's text
-    print(element.text)
-    # You can add additional interactions here if needed
+    element.click()  # Interact with the identified web element (e.g., click)
+    # You can add more interactions here if needed
 
 # Example usage
 if __name__ == '__main__':
