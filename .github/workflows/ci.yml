@@ -4,16 +4,24 @@ on:
   push:
     branches:
       - main
+
   workflow_dispatch:
+    inputs:
+      trigger_id:
+        description: "Unique trigger id for each dispatch"
+        required: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+
       - name: Verify Python
         run: python --version
