@@ -8,7 +8,7 @@ on:
     inputs:
       trigger_id:
         description: "Unique trigger ID"
-        default: "1772799653.3314285"
+        default: "1772799653.9573274"
 
 jobs:
   build:
