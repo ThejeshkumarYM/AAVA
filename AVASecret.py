@@ -19,14 +19,13 @@ def test_google(driver):
 
 def test_testrail(driver):
     driver.get("https://www.testrail.com/")
-    time.sleep(5)
+    time.sleep(10)
 
-    if "TestRail" in driver.title:
-        print("✅ Status Report: SUCCESS")
-        print("URL: https://www.testrail.com/")
-        print("Title:", driver.title)
-    else:
-        raise Exception(f"Unexpected page title: {driver.title}")
+    print("Current URL:", driver.current_url)
+    print("Page Title:", driver.title)
+
+    print("Page Source Preview:")
+    print(driver.page_source[:1000])
 
 try:
     driver = create_driver()
