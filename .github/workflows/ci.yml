@@ -1,4 +1,4 @@
-name: Smart Python CI
+name: ThejeshAAVA
 
 on:
   workflow_dispatch:
