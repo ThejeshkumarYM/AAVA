@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import WebDriverException, TimeoutException
 import time
 
+print("thejesh")
 
 def create_driver():
     options = Options()
